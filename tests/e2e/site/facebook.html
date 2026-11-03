@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Facebook (mock)</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="fb-header"><strong>facebook</strong></div>
+  <main>
+    <form id="fb-form">
+      <h2>Log in to continue</h2>
+      <label>Email <input id="email" name="email" type="text"></label>
+      <label>Password <input id="pass" name="pass" type="password"></label>
+      <button type="submit">Submit</button>
+    </form>
+  </main>
+  <script>
+    document.getElementById("fb-form").addEventListener("submit", function (event) {
+      event.preventDefault();
+      if (window.opener && window.opener.tindogLoggedIn) {
+        window.opener.tindogLoggedIn();
+      }
+      window.close();
+    });
+  </script>
+</body>
+</html>
