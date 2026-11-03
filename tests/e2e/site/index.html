@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>TinDog (mock)</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>TinDog</h1>
+    <button id="home-login" type="button">Log in</button>
+  </header>
+
+  <main id="home">
+    <h2>Find your furry match</h2>
+    <p>Mock of the TinDog landing page used for end-to-end tests.</p>
+  </main>
+
+  <div id="login-modal" class="overlay hidden">
+    <div class="dialog">
+      <h2>Welcome back</h2>
+      <button id="facebook-login" type="button">Log in with Facebook</button>
+    </div>
+  </div>
+
+  <div id="location-popup" class="overlay hidden">
+    <div class="dialog">
+      <h2>Enable location</h2>
+      <button type="button" data-next="notifications-popup">Allow</button>
+    </div>
+  </div>
+
+  <div id="notifications-popup" class="overlay hidden">
+    <div class="dialog">
+      <h2>Stay in the loop</h2>
+      <button type="button" class="secondary" data-next="cookies-popup">Not interested</button>
+    </div>
+  </div>
+
+  <div id="cookies-popup" class="overlay hidden">
+    <div class="dialog">
+      <h2>We use cookies</h2>
+      <button type="button" data-next="cards">I accept</button>
+    </div>
+  </div>
+
+  <main id="cards" class="hidden">
+    <div id="loading" class="loading">Loading...</div>
+    <div id="profile" class="hidden">
+      <div class="card"><div class="avatar"></div><p id="name"></p></div>
+      <button id="like" type="button" aria-label="Like">&#9829;</button>
+      <div id="counter"></div>
+    </div>
+    <div id="finished" class="hidden"><h2>No more profiles nearby</h2></div>
+  </main>
+
+  <div id="match-modal" class="overlay hidden">
+    <div class="dialog">
+      <h2>It is a match!</h2>
+      <button id="back" type="button">Back to Tinder</button>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
