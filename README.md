@@ -6,8 +6,8 @@ that logs in to **TinDog** (the course's Tinder clone,
 It is a modernised version of the
 [earlier solution](https://github.com/Tirsvad/udemy.python.100-days-of-code/tree/main/day-50-tinder-auto-find-match).
 
-Wiki (what each step teaches): [English](docs/wiki/en/Home.md) ·
-[Dansk](docs/wiki/da/Home.md) · [Bahasa Malaysia](docs/wiki/ms/Home.md)
+Wiki (what each step teaches): [English](docs/wiki/Home.md) ·
+[Dansk](docs/wiki/Home-da.md) · [Bahasa Malaysia](docs/wiki/Home-ms.md)
 
 > Be honest with the people you date: tell them you automate your swiping.
 > TinDog allows 20 likes a day, Tinder 100 on the free tier.
