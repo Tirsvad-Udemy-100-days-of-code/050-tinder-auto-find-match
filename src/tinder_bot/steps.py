@@ -6,6 +6,7 @@ from time import sleep
 
 from selenium.common.exceptions import (
     ElementClickInterceptedException,
+    ElementNotInteractableException,
     NoSuchElementException,
     TimeoutException,
     WebDriverException,
@@ -65,12 +66,15 @@ def like_once(
     settings: Settings,
     pause: Callable[[float], None] = sleep,
 ) -> None:
-    """Click Like once, waiting out loading and dismissing match pop-ups."""
+    """Click Like once, waiting out loading and dismissing match pop-ups.
+
+    A missing or still hidden (not interactable) button counts as loading.
+    """
     while True:
         try:
             driver.find_element(*locators.LIKE_BUTTON).click()
             return
-        except NoSuchElementException:
+        except (NoSuchElementException, ElementNotInteractableException):
             pause(settings.retry_delay)
         except ElementClickInterceptedException:
             try:

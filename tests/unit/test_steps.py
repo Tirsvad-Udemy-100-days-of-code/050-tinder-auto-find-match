@@ -3,6 +3,7 @@ from unittest.mock import MagicMock
 import pytest
 from selenium.common.exceptions import (
     ElementClickInterceptedException,
+    ElementNotInteractableException,
     NoSuchElementException,
 )
 
@@ -15,6 +16,19 @@ def test_like_once_retries_while_loading() -> None:
     driver = MagicMock()
     button = MagicMock()
     driver.find_element.side_effect = [NoSuchElementException(), button]
+    pauses: list[float] = []
+
+    like_once(driver, Settings(), pauses.append)
+
+    button.click.assert_called_once()
+    assert pauses == [2.0]
+
+
+def test_like_once_retries_while_button_hidden() -> None:
+    driver = MagicMock()
+    hidden, button = MagicMock(), MagicMock()
+    hidden.click.side_effect = ElementNotInteractableException()
+    driver.find_element.side_effect = [hidden, button]
     pauses: list[float] = []
 
     like_once(driver, Settings(), pauses.append)
