@@ -9,7 +9,7 @@
 ## Version History
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
-| 2026-11-16 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S02 | Initial version; created with the review records of the baseline (autonomous, not independent) | pending |
+| 2026-11-16 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S02 | Initial version; created with the review records of the baseline (autonomous, not independent) | [261dc82] |
 
 ---
 
@@ -58,3 +58,4 @@ No view, design or test-plan artifact exists yet (the scope excludes them), so t
 [RC-003]: ./reviews/rc-003-project-plan.md
 [RC-004]: ./reviews/rc-004-milestone-001.md
 [RC-005]: ./reviews/rc-005-wiki.md
+[261dc82]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/050-tinder-auto-find-match/commit/261dc823b7e96a855fe22f2ada6fc9ee0ea6390a
