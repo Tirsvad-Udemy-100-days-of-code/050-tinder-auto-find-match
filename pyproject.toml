@@ -3,13 +3,21 @@ name = "tinder-auto-find-match"
 version = "0.1.0"
 description = "Day 50 - Selenium bot that logs in to TinDog, dismisses pop-ups and likes profiles."
 requires-python = ">=3.11"
+license = "AGPL-3.0-only"
+license-files = ["LICENSE"]
+authors = [{ name = "Jens Tirsvad Nielsen" }]
 dependencies = ["selenium>=4.20"]
+
+[project.urls]
+Repository = "https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/050-tinder-auto-find-match"
+Documentation = "https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/050-tinder-auto-find-match/wiki"
+"Issue tracker" = "https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/050-tinder-auto-find-match/issues"
 
 [project.optional-dependencies]
 dev = ["pytest", "ruff"]
 
 [build-system]
-requires = ["setuptools>=68"]
+requires = ["setuptools>=77"]
 build-backend = "setuptools.build_meta"
 
 [tool.setuptools.packages.find]

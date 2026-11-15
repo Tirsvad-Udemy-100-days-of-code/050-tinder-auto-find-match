@@ -18,3 +18,5 @@ given.
 
 If Chrome fails to start as root in the container, `create_driver` already
 passes `--no-sandbox`; add `--shm-size=1g` to `docker run` if it crashes.
+
+The container runs as a user with the id 1000. On Linux, a folder that you mount as `/out` must be writable by that id.

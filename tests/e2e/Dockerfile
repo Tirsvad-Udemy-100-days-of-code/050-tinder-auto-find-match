@@ -10,6 +10,10 @@ WORKDIR /app
 COPY src ./src
 COPY tests/e2e ./tests/e2e
 
+# Run as a user without root rights.
+RUN useradd --create-home --uid 1000 app
+USER app
+
 # Selenium finds /usr/bin/chromedriver on PATH; point it at the distro Chromium.
 ENV CHROME_BIN=/usr/bin/chromium
 VOLUME /out
