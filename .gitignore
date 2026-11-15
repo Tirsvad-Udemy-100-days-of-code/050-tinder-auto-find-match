@@ -6,3 +6,6 @@ __pycache__/
 .ruff_cache/
 .env
 .data/
+
+# AI prompt log (the repository is public)
+/docs/ai-prompts/

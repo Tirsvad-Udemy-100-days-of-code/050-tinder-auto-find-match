@@ -1,0 +1,34 @@
+# EditorConfig baseline for every code project: copy to the root of the repository as .editorconfig.
+# Language-specific blocks (for example templates/editorconfig/csharp.editorconfig) are appended
+# after this file. Rule: the coding-conventions skill, "Every code project has a .editorconfig".
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+indent_style = space
+indent_size = 2
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+# Markdown uses trailing spaces for a line break
+[*.md]
+trim_trailing_whitespace = false
+
+# Windows command files need CRLF; also set `*.cmd text eol=crlf` and `*.bat text eol=crlf` in .gitattributes
+[*.{cmd,bat}]
+end_of_line = crlf
+
+# Shell scripts: `shfmt -d` reads these settings
+[*.sh]
+switch_case_indent = true
+
+# Makefiles require hard tabs
+[Makefile]
+indent_style = tab
+
+[*.py]
+indent_size = 4
+
+[*.cs]
+indent_size = 4
